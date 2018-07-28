@@ -1,0 +1,330 @@
+#include <GL/gl.h>
+#include <GL/glut.h>
+int x0=0,y0=200,p;
+void display(void)
+{
+    /* clear all pixels */
+    glClear (GL_COLOR_BUFFER_BIT);
+    /* draw white polygon (rectangle) with corners at
+    * (0.25, 0.25, 0.0) and (0.75, 0.75, 0.0)
+    */
+//glColor3f (1.0, 0.25, 1.0);
+
+    p=1-y0;
+
+
+    while(x0<=y0)
+    {
+        if(p<0)
+        {
+
+
+            x0=x0+1;
+            p=p+2*x0+1;
+
+        }
+        else if(p>=0)
+        {
+
+            x0=x0+1;
+            y0=y0-1;
+            p=(p+(2*x0)+1-(2*y0));
+
+        }
+        glColor3f(255,0,0);
+        glBegin(GL_POLYGON);
+        glVertex2d (x0, y0);
+        glVertex2d (x0, -y0);
+        glVertex2d (-x0, y0);
+        glVertex2d (-x0, -y0);
+        glVertex2d (y0,x0);
+        glVertex2d(y0,-x0);
+        glVertex2d(-y0,x0);
+        glVertex2d(-y0,-x0);
+        glEnd();
+
+    }
+
+    glColor3f(255,255,255); // body left side
+    glBegin(GL_POLYGON);
+    glVertex2d (-150, -400);
+    glVertex2d (-100, -400);
+    glVertex2d (-100, 325);
+    glVertex2d (-150,325);
+
+    glEnd();
+
+    glColor3f(255,255,255); // body top
+    glBegin(GL_POLYGON);
+    glVertex2d (-100, 450);
+    glVertex2d (200, 450);
+    glVertex2d (150, 325);
+    glVertex2d (-150,325);
+       glEnd();
+       glColor3f(255,255, 255); // body middle
+    glBegin(GL_POLYGON);
+    glVertex2d (-2, -400);
+    glVertex2d (2, -400);
+    glVertex2d (2, 325);
+    glVertex2d (-2,325);
+       glEnd();
+       glColor3f(255,255, 255); // body middle right
+    glBegin(GL_POLYGON);
+    glVertex2d (48, -400);
+    glVertex2d (52, -400);
+    glVertex2d (52, 325);
+    glVertex2d (48,325);
+       glEnd();
+       glColor3f(255,255, 255); // body middle left
+    glBegin(GL_POLYGON);
+    glVertex2d (-48, -400);
+    glVertex2d (-52, -400);
+    glVertex2d (-52, 325);
+    glVertex2d (-48,325);
+       glEnd();
+       glColor3f(255,255, 255); // body middle left
+    glBegin(GL_POLYGON);
+    glVertex2d (-23, -400);
+    glVertex2d (-27, -400);
+    glVertex2d (-27, 325);
+    glVertex2d (-23,325);
+       glEnd();
+       glColor3f(255,255, 255); // body middle right
+    glBegin(GL_POLYGON);
+    glVertex2d (23, -400);
+    glVertex2d (27, -400);
+    glVertex2d (27, 325);
+    glVertex2d (23,325);
+       glEnd();
+       glColor3f(255,255, 255); // body middle left
+    glBegin(GL_POLYGON);
+    glVertex2d (-73, -400);
+    glVertex2d (-77, -400);
+    glVertex2d (-77, 325);
+    glVertex2d (-73,325);
+       glEnd();
+       glColor3f(255,255, 255); // body middle right
+    glBegin(GL_POLYGON);
+    glVertex2d (73, -400);
+    glVertex2d (77, -400);
+    glVertex2d (77, 325);
+    glVertex2d (73,325);
+       glEnd();
+    glColor3f(255,255,255);
+    glBegin(GL_POLYGON);
+    glVertex2d (220, -400); //right 1st
+    glVertex2d (320, -400);
+    glVertex2d (320, 270);
+    glVertex2d (220,270);
+
+
+    glEnd();
+
+     glColor3f(0,0,0);
+    glBegin(GL_POLYGON);
+    glVertex2d (240, -400); //right 1st middle balck
+    glVertex2d (300, -400);
+    glVertex2d (300, 250);
+    glVertex2d (240,250);
+
+
+    glEnd();
+     glColor3f(255,255,255);
+    glBegin(GL_POLYGON);
+    glVertex2d (268, -400); //right 1st middle
+    glVertex2d (272, -400);
+    glVertex2d (272, 250);
+    glVertex2d (268,250);
+
+
+    glEnd();
+
+    glColor3f(255,255,255);
+    glBegin(GL_POLYGON);
+    glVertex2d (253, -400); //right 1st middle
+    glVertex2d (257, -400);
+    glVertex2d (257, 250);
+    glVertex2d (253,250);
+
+
+    glEnd();
+    glColor3f(255,255,255);
+    glBegin(GL_POLYGON);
+    glVertex2d (283, -400); //right 1st middle
+    glVertex2d (287, -400);
+    glVertex2d (287, 250);
+    glVertex2d (283,250);
+
+
+    glEnd();
+      glColor3f(255,255,255);
+    glBegin(GL_POLYGON);
+    glVertex2d (-220, -400); //right 1st
+    glVertex2d (-320, -400);
+    glVertex2d (-320, 270);
+    glVertex2d (-220,270);
+
+
+    glEnd();
+
+     glColor3f(0,0,0);
+    glBegin(GL_POLYGON);
+    glVertex2d (-240, -400); //right 1st middle balck
+    glVertex2d (-300, -400);
+    glVertex2d (-300, 250);
+    glVertex2d (-240,250);
+
+
+    glEnd();
+     glColor3f(255,255,255);
+    glBegin(GL_POLYGON);
+    glVertex2d (-268, -400); //right 1st middle
+    glVertex2d (-272, -400);
+    glVertex2d (-272, 250);
+    glVertex2d (-268,250);
+
+
+    glEnd();
+
+    glColor3f(255,255,255);
+    glBegin(GL_POLYGON);
+    glVertex2d (-253, -400); //right 1st middle
+    glVertex2d (-257, -400);
+    glVertex2d (-257, 250);
+    glVertex2d (-253,250);
+
+
+    glEnd();
+    glColor3f(255,255,255);
+    glBegin(GL_POLYGON);
+    glVertex2d (-283, -400); //right 1st middle
+    glVertex2d (-287, -400);
+    glVertex2d (-287, 250);
+    glVertex2d (-283,250);
+
+
+    glEnd();
+
+
+    glColor3f(255,255,255); // body right side
+    glBegin(GL_POLYGON);
+    glVertex2d (150, -400);
+    glVertex2d (100, -400);
+    glVertex2d (100, 325);
+    glVertex2d (150,325);
+    glEnd();
+
+    glColor3f(0,255,0); // down basement
+    glBegin(GL_POLYGON);
+    glVertex2d (-500, -500);
+    glVertex2d (500, -500);
+    glVertex2d (500, -400);
+    glVertex2d (-500,-400);
+    glEnd();
+
+    glColor3f(255,255,255); //most right
+    glBegin(GL_POLYGON);
+    glVertex2d (460, -400);
+    glVertex2d (360, -400);
+    glVertex2d (360, 200);
+    glVertex2d (460,200);
+    glEnd();
+    glColor3f(0,0,0); //most right middle black
+    glBegin(GL_POLYGON);
+    glVertex2d (440, -400);
+    glVertex2d (380, -400);
+    glVertex2d (380, 160);
+    glVertex2d (440,160);
+    glEnd();
+    glColor3f(255,255,255); //most right middle
+    glBegin(GL_POLYGON);
+    glVertex2d (412, -400);
+    glVertex2d (408, -400);
+    glVertex2d (408, 160);
+    glVertex2d (412,160);
+    glEnd();
+    glColor3f(255,255,255); //most right middle
+    glBegin(GL_POLYGON);
+    glVertex2d (393, -400);
+    glVertex2d (397, -400);
+    glVertex2d (397, 160);
+    glVertex2d (393,160);
+    glEnd();
+    glColor3f(255,255,255); //most right middle
+    glBegin(GL_POLYGON);
+    glVertex2d (423, -400);
+    glVertex2d (427, -400);
+    glVertex2d (427, 160);
+    glVertex2d (423,160);
+    glEnd();
+    glColor3f(255,255,255); //most left
+    glBegin(GL_POLYGON);
+    glVertex2d (-460, -400);
+    glVertex2d (-360, -400);
+    glVertex2d (-360, 200);
+    glVertex2d (-460,200);
+    glEnd();
+    glColor3f(0,0,0); //most left middle black
+    glBegin(GL_POLYGON);
+    glVertex2d (-440, -400);
+    glVertex2d (-380, -400);
+    glVertex2d (-380, 160);
+    glVertex2d (-440,160);
+    glEnd();
+    glColor3f(255,255,255); //most left middle
+    glBegin(GL_POLYGON);
+    glVertex2d (-412, -400);
+    glVertex2d (-408, -400);
+    glVertex2d (-408, 160);
+    glVertex2d (-412,160);
+    glEnd();
+    glColor3f(255,255,255); //most left middle
+    glBegin(GL_POLYGON);
+    glVertex2d (-393, -400);
+    glVertex2d (-397, -400);
+    glVertex2d (-397, 160);
+    glVertex2d (-393,160);
+    glEnd();
+    glColor3f(255,255,255); //most left middle
+    glBegin(GL_POLYGON);
+    glVertex2d (-423, -400);
+    glVertex2d (-427, -400);
+    glVertex2d (-427, 160);
+    glVertex2d (-423,160);
+    glEnd();
+
+
+    /* don't wait!
+    * start processing buffered OpenGL routines
+    */
+    glFlush ();
+}
+void init (void)
+{
+    /* select clearing (background) color */
+    glClearColor (0.0, 0.0, 0.0, 0.0);
+    /* initialize viewing values */
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+//glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
+    gluOrtho2D(-500, 500, -500, 500);
+}
+/*
+* Declare initial window size, position, and display mode
+* (single buffer and RGBA). Open window with "hello"
+* in its title bar. Call initialization routines.
+* Register callback function to display graphics.
+* Enter main loop and process events.
+*/
+int main(int argc, char** argv)
+{
+    glutInit(&argc, argv);
+    glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
+    glutInitWindowSize (1300, 650);
+    glutInitWindowPosition (100, 100);
+    glutCreateWindow ("hello");
+    init ();
+    glutDisplayFunc(display);
+    glutMainLoop();
+    return 0; /* ISO C requires main to return int. */
+}
